@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Matt Weiss<img src="mlweiss.jpg" height="75" align="left"></h1>
+
+<h3>
+Data Science PhD Student
+</h3>
+
+<h2><left>Research Projects</left></h2>
+
+<h3><left>Optimal Filtering for Deep Learning</left></h3>
+
+<p>  </p>
+
+<img src="optimal_filtering.png" height="175" width="400"align="right">Filtering is the process of recovering a signal, x(t), from noisy measurements, z(t).  One common filter is the Kalman Filter, which is proven to be the optimal unbiased linear filter under certain conditions.  One such condition is that the noise present in z(t), obscuring x(t), is a zero-mean Gaussian process with known covariance R.  However, in practice the determination of the actual R is problematic and often tuned using cross-validation and domain knowledge.  In our current research we approach the problem in a different way.  Instead of tuning R based on cross-validation and Kalman Filter performance, we fix R and learn a transformation of the measurements, z(t), which improves Kalman Filter performance.  As this transformation needs to receive feedback from the Kalman Filter, an artificial neural network is an ideal candidate.  Specifically, the transformation is done using an autoencoder to first encode z(t), use the encoded data as input to a Kalman Filter and then decode the Kalman Filter's output.  Using simulated data we show the Kalman Filter's estimate of x(t) is more accurate when accompanied by an autoencoder.  A preliminary result of this autoencoder/Kalman Filter hybrid is that it is not necessary to know R <i>a priori</i> or estimate it experimentally.
+
+<h3><left>Applications of the Kalman Filter to Chemical Sensors for Downstream Machine Learning</left></h3>
+
+<p>  </p>
+
+<img src="kalman_filter_ml.png" height="400" width="400"align="right">Chemical sensors play an important role in a variety of civilian and military domains.  In these contexts, the ability to accurately and quickly identify chemical agents is of utmost importance.  In practice, constraints on physical footprint, power consumption, ease of use and time required for accurate detection often restrict the utility of sensors, particularly in remote and isolated regions.  One solution to address this problem is the engineering of advanced signal processing techniques which decrease the time required for accurate detection and allow software to facilitate the construction of hardware that meet stringent power and concept of operations guidelines.  In this research, we propose the Kalman Filter as a preprocessing technique applicable to chemical sensor time series data for downstream machine learning.  Using data collected from a sensor array of multiple unique polymer-graphene nanoplatelet coated electrodes we show accurate and early detection of both organophosphates and interferents is improved when the Kalman Filter is used as a preprocessing technique.  In particular, within two seconds of analyte exposure to the sensor array, classification using Kalman Filtered first derivative estimates achieve an error of less than 10%.  By comparison, the non-Kalman Filtered dataset has a classification error rate above 40% within this time.  An advantage of our approach is classification does not depend on a set parameter, such as maximum resistance change, or a pre-determined exposure time, which allows rapid classification immediately after analyte introduction.
+
+<!--<h3><left>Publications:</left></h3>
+<A href="jutras_Paper1Title.pdf">Click Here for Paper</A>
+-->
+
+</body>
+</html>
